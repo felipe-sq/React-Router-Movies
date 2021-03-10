@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router';
 
 export default function Movie(props) {
+  // const { movies } = props;
   const [movie, setMovie] = useState();
 
   let { moviesID } = useParams();
@@ -13,8 +14,8 @@ export default function Movie(props) {
     axios
       .get(`http://localhost:5000/api/movies/${moviesID}`) // Study this endpoint with Postman
       .then(response => {
-        console.log(response.data)
-        setMovie(response.data.id)
+        console.log(response)
+        setMovie(response)
         // Study this response with a breakpoint or log statements
         // and set the response data as the 'movie' slice of state
       })

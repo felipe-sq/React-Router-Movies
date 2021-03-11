@@ -14,9 +14,9 @@ export default function SavedList(props) {
       {props.list.map(movie => (
         <span className="saved-movie">{movie.title}</span>
       ))}
-      <NavLink to='/'>
+      {/* <NavLink to='/'> */}
         <button className="home-button" onClick={routeToHome}>Home</button>
-      </NavLink>
+      {/* </NavLink> */}
       
       <Route path="/">
         {/* <MovieList /> */}
